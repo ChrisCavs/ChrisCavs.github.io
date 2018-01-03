@@ -1,0 +1,27 @@
+html {
+  max-width: 1300px;
+  margin: auto;
+  font-family: "Roboto", Sans-serif;
+}
+body {
+  background-color: #F5F5F3;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+.chris {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1F1E38;
+  border-bottom: 3px solid #EF5322;
+}
+.cavs {
+  font-size: 30px;
+  font-weight: 700;
+  color: #EF5322;
+}
+.tablinks {
+
+}
