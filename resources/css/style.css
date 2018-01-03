@@ -8,11 +8,20 @@ html {
 body {
   background-color: #F5F5F3;
 }
+
+/*=====Header=====*/
 header {
   display: flex;
   justify-content: space-between;
-  padding-top: 60px;
+  padding-top: 100px;
   margin-bottom: 60px;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.chriscavs {
+  padding: 12px;
 }
 .chris {
   font-size: 30px;
@@ -26,5 +35,91 @@ header {
   color: #EF5322;
 }
 .tablinks {
+  font-family: "Roboto", Sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 
+  color: #1F1E38;
+  background-color: inherit;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  margin: 0px 16px;
+  padding: 12px;
+
+  transition: 0.3s;
 }
+.tablinks:hover {
+  background-color: #dcdcda;
+  opacity: .7;
+  color: #bf421b;
+}
+button.active {
+  color: #EF5322;
+}
+.bottom-tablinks {
+  float: right;
+}
+
+/*=====Content Container/Management=====*/
+.tabcontent {
+  display: none;
+  justify-content: center;
+
+  animation: fadeIn 1.3s;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.tabcontent-container {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 60px;
+}
+
+/*=====Content Formatting-> Background=====*/
+.background-linkedin {
+  width: 300px;
+  height: 300px;
+
+  background-image: url("https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAIA_wDGAAAAAQAAAAAAAAoqAAAAJDBjMzJkZWJjLTQ0ZTktNDM5My1iNjI0LWJkZTExMjE0YWIwMQ.jpg");
+
+  border-radius: 50%;
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  margin-right: 8%;
+}
+.background-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 35%;
+}
+.background-content-title {
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #8b8d8e;
+
+  margin-bottom: 30px;
+}
+.background-content-body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 175%;
+
+  color: #8b8d8e;
+}
+.bold {
+  font-weight: 700;
+  color: #6f7071;
+}
+
+/*=====Content Formatting-> Projects=====*/

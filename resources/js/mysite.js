@@ -1,4 +1,5 @@
 function openPage(evt, contentName) {
+
     // hide all "tabcontent" sections
     tabcontent = document.getElementsByClassName("tabcontent");
     for (var i = 0; i < tabcontent.length; i++) {

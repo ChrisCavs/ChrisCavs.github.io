@@ -18,30 +18,35 @@
       </div>
 
       <nav>
-        <button class="tablinks" onclick="openPage(event, 'background')">Background</button>
+        <button id="defaultOpen" class="tablinks" onclick="openPage(event, 'background')">Background</button>
         <button class="tablinks" onclick="openPage(event, 'projects')">Projects</button>
         <button class="tablinks" onclick="openPage(event, 'contact')">Contact</button>
       </nav>
     </header>
 
-    <div class="tabcontent background" id="default">
-      <div class="background-linkedin">
+    <div class="tabcontent" id="background">
+      <div class="tabcontent-container">
+        <div class="background-linkedin"></div>
+        <div class="background-content">
+          <h2 class="background-content-title">Aspiring Web Developer</h2>
+          <p class="background-content-body">My name is Christopher Cavalea, and I am a Capital Markets Analyst based in Washington DC.  I am looking for an opportunity to work in New York City and unleash my potential as a web developer.  At the core of who I am, there is a simple belief: <span class="bold">failure is learning.</span>  Every time I fail, I come back stronger and more relentless than I was before.  I apply this belief to all my projects, <span class="bold">developing myself as I develop the code.</span></p>
+        </div>
       </div>
-      <div class="background-content">
-        <h2 class="background-content-title">About Me</h2>
-        <p class="background-content-body"></p>
-      </div>
-      <button class="bottom-tablinks" onclick="openPage(event, 'projects')">Let's see some projects...</button>
+      <button class="tablinks bottom-tablinks" onclick="openPage(event, 'projects')">What have I done?  <i class="fas fa-arrow-circle-right fa-lg"></i></button>
     </div>
 
-    <div class="tabcontent projects">
+    <div class="tabcontent" id="projects">
       <div class="projects-content colmar">
+        <div class="projects-content-image"></div>
+        <h2 class="projects-content-title">Colmar Academy</h2>
+        <p class="projects-content-body>A basic, professional website for a fictional online university.</p>
+        <p class="projects-content-skills>Mobile-first, flexbox, guided scroll</p>
       </div>
       <div class="projects-content matching-game">
       </div>
     </div>
 
-    <div class="tabcontent contact">
+    <div class="tabcontent" id="contact">
       <div class="contact-content">
         <i class="fas fa-envelope"></i>
         <p>Email</p>
@@ -58,9 +63,11 @@
 
     <footer>
       <div class="footer-content">
-        <a href="#" data-jump=".chriscavs">Click me to go up</a>
       </div>
     </footer>
 
+    <script>
+      document.getElementById("defaultOpen").click();
+    </script>
   </body>
 </html>
