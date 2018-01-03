@@ -19,8 +19,8 @@
 
       <nav>
         <button id="defaultOpen" class="tablinks" onclick="openPage(event, 'background')">Background</button>
-        <button class="tablinks" onclick="openPage(event, 'projects')">Projects</button>
-        <button class="tablinks" onclick="openPage(event, 'contact')">Contact</button>
+        <button id="projectsTab" class="tablinks" onclick="openPage(event, 'projects')">Projects</button>
+        <button id="contactTab" class="tablinks" onclick="openPage(event, 'contact')">Contact</button>
       </nav>
     </header>
 
@@ -32,33 +32,49 @@
           <p class="background-content-body">My name is Christopher Cavalea, and I am a Capital Markets Analyst based in Washington DC.  I am looking for an opportunity to work in New York City and unleash my potential as a web developer.  At the core of who I am, there is a simple belief: <span class="bold">failure is learning.</span>  Every time I fail, I come back stronger and more relentless than I was before.  I apply this belief to all my projects, <span class="bold">developing myself as I develop the code.</span></p>
         </div>
       </div>
-      <button class="tablinks bottom-tablinks" onclick="openPage(event, 'projects')">What have I done?  <i class="fas fa-arrow-circle-right fa-lg"></i></button>
+      <button class="tablinks right-bottom-tablinks toprojects" onclick="openPagePlus('projectsTab', event, 'projects')">What have I done?  <i class="fas fa-arrow-circle-right fa-lg"></i></button>
     </div>
 
     <div class="tabcontent" id="projects">
-      <div class="projects-content colmar">
-        <div class="projects-content-image"></div>
-        <h2 class="projects-content-title">Colmar Academy</h2>
-        <p class="projects-content-body>A basic, professional website for a fictional online university.</p>
-        <p class="projects-content-skills>Mobile-first, flexbox, guided scroll</p>
+      <div class="tabcontent-container">
+        <div class="projects-content colmar">
+          <h2 class="projects-content-title">Colmar Academy</h2>
+          <div class="projects-content-image"><img src="resources/images/Colmar.png"></div>
+          <p class="projects-content-body">A basic website for a fictional online university.  <span class="bold">(Mobile-first, Guided-scroll, Flexbox)</span></p>
+        </div>
+        <div class="projects-content matching-game">
+          <h2 class="projects-content-title">Matching Game</h2>
+	  <div class="projects-content-image"><img src="resources/images/matchgame.png"></div>
+	  <p class="projects-content-body">A simple webapp built with javascript <span class="bold">(Loops, Arrays, Methods, jQuery)</span></p>
+        </div>
+        <div class="projects-content apple-remake">
+          <h2 class="projects-content-title">Apple Redesign</h2>
+	  <div class="projects-content-image"><img src="resources/images/apple.png"></div>
+	  <p class="projects-content-body">Apple.com remade into one-page design <span class="bold">(Fixed-header, Re-design)</span></p>
+        </div>
       </div>
-      <div class="projects-content matching-game">
-      </div>
+      <button class="tablinks right-bottom-tablinks" onclick="openPagePlus('contactTab', event, 'contact')">How to contact me  <i class="fas fa-arrow-circle-right fa-lg"></i></button>
     </div>
 
     <div class="tabcontent" id="contact">
-      <div class="contact-content">
-        <i class="fas fa-envelope"></i>
-        <p>Email</p>
+      <div class="contact-container">
+        <p class="contact-content-body">I'm always interested in new opportunities, new projects, as well as any comments you may have in regards to my work.  Feel free to reach out.</p>
+        <div class="contact-links-container">
+          <a class="contact-content">
+            <i class="fas fa-envelope"></i>
+            <p>Email</p>
+          </a>
+          <a class="contact-content">
+            <i class="fab fa-github"></i>
+            <p>GitHub</p>
+          </a>
+          <a class="contact-content">
+            <i class="fab fa-linkedin"></i>
+            <p>LinkedIn</p>
+          </a>
+        </div>
       </div>
-      <div class="contact-content">
-        <i class="fab fa-github"></i>
-        <p>GitHub</p>
-      </div>
-      <div class="contact-content">
-        <i class="fab fa-linkedin"></i>
-        <p>LinkedIn</p>
-      </div>
+    <button class="tablinks left-bottom-tablinks" onclick="openPagePlus('defaultOpen', event, 'background')"><i class="fas fa-arrow-circle-left fa-lg"></i> Take it back to the top!</button>
     </div>
 
     <footer>

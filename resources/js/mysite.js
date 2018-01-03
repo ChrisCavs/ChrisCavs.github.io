@@ -16,3 +16,10 @@ function openPage(evt, contentName) {
     document.getElementById(contentName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+function openPagePlus(target, evt, contentName) {
+    openPage(evt, contentName);
+
+    //add "active" class to top-nav based on target
+    document.getElementById(target).classList.add("active");
+}
