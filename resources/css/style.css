@@ -1,6 +1,5 @@
 html {
   font-family: "Roboto", Sans-serif;
-
 }
 body {
   background-color: #F5F5F3;
@@ -235,6 +234,10 @@ footer {
 
 /*=====Very-Mobile=====*/
 @media screen and (max-width: 768px) {
+  header {
+    padding-top: 16px;
+    margin-bottom: 30px;
+  }
   nav {
     display: none;
   }
