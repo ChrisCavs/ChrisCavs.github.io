@@ -243,6 +243,7 @@ footer {
   }
   .tabcontent-container {
     flex-direction: column;
+    margin-bottom: 30px;
   }
   .background-content {
     width: 100%;
