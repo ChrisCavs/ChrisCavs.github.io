@@ -14,7 +14,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding-top: 100px;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 nav {
   display: flex;
@@ -81,7 +81,7 @@ button.active {
   display: flex;
   justify-content: center;
 
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 
 /*=====Content Formatting-> Background=====*/
