@@ -22,4 +22,7 @@ function openPagePlus(target, evt, contentName) {
 
     //add "active" class to top-nav based on target
     document.getElementById(target).classList.add("active");
+    
+    //scroll to top of page (for mobile users)
+    window.scrollTo(0, 0);
 }
