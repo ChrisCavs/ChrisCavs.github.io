@@ -1,12 +1,13 @@
 html {
+  font-family: "Roboto", Sans-serif;
+
+}
+body {
+  background-color: #F5F5F3;
   width: 85%;
   max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
-  font-family: "Roboto", Sans-serif;
-}
-body {
-  background-color: #F5F5F3;
 }
 
 /*=====Header=====*/
@@ -208,4 +209,26 @@ button.active {
 .contact-content:hover {
   color: #EF5322;
   opacity: 0.75;
+}
+
+/*=====Footer=====*/
+footer {
+  position: relative;
+  top: 90px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  color: #8b8d8e;
+
+  border-top: 3px solid #8b8d8e;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-right: 16px;
 }
