@@ -234,7 +234,7 @@ footer {
 }
 
 /*=====Very-Mobile=====*/
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 768px) {
   nav {
     display: none;
   }
