@@ -26,3 +26,5 @@ function openPagePlus(target, evt, contentName) {
     //scroll to top of page (for mobile users)
     window.scrollTo(0, 0);
 }
+
+document.querySelector('chriscavs').addEventListener('click', openPage(event, 'background'));
