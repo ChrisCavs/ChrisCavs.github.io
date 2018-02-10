@@ -38,7 +38,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 nav {
@@ -89,8 +89,7 @@ nav button {
 
 /*=====Content Formatting-> Background=====*/
 .background {
-  margin-bottom: 40px;
-  margin-top: 20px;
+  margin-bottom: 100px;
 
   @include min($tablet) {
     display: flex;
@@ -130,8 +129,8 @@ nav button {
 
     width: 40%;
 
-    margin-top: none;
-    margin-bottom: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 }
 
@@ -153,7 +152,32 @@ nav button {
 /*=====Content Formatting-> Resume=====*/
 
 .resume {
-  margin-bottom: 80px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+
+  border-top: 2.5px solid #EF5322;
+}
+
+.resume-container {
+  @include min($tablet) {
+    display: flex;
+    justify-content: space-between;
+
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+}
+
+.resume-container-left {
+  @include min($tablet) {
+    width: 30%;
+  }
+}
+
+.resume-container-right {
+  @include min($tablet) {
+    width: 70%;
+  }
 }
 
 .resume-title {
@@ -164,7 +188,7 @@ nav button {
 
   @include min($tablet) {
     margin-left: 16px;
-    margin-top: 24px;
+    margin-top: 2px;
   }
 }
 
@@ -197,14 +221,15 @@ nav button {
 /*=====Content Formatting-> Projects=====*/
 
 .projects {
-  padding-top: 80px;
-  margin-bottom: 80px;
+  padding-top: 100px;
+  margin-bottom: 100px;
 
   border-top: 2.5px solid #EF5322;
 }
 
 .projects-container {
   padding-bottom: 20px;
+  margin-top: 30px;
 
   @include min($tablet) {
     display: flex;
@@ -216,8 +241,6 @@ nav button {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin-top: 30px;
 
   cursor: pointer;
 
@@ -255,7 +278,7 @@ nav button {
 /*=====Content Formatting-> Contact=====*/
 
 .contact {
-  padding-top: 80px;
+  padding-top: 100px;
   margin-bottom: 120px;
 
   border-top: 2.5px solid #EF5322;
