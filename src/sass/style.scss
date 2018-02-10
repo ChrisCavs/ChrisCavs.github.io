@@ -89,7 +89,7 @@ nav button {
 
 /*=====Content Formatting-> Background=====*/
 .background {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   margin-top: 20px;
 
   @include min($tablet) {
@@ -153,10 +153,7 @@ nav button {
 /*=====Content Formatting-> Resume=====*/
 
 .resume {
-  padding-top: 80px;
   margin-bottom: 80px;
-
-  border-top: 2.5px solid #EF5322;
 }
 
 .resume-title {
