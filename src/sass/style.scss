@@ -14,6 +14,26 @@ body {
   margin-left: auto;
 }
 
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #1F1E38;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #8b8d8e;
+
+  margin-bottom: 16px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
 /*=====Header=====*/
 
 header {
@@ -127,16 +147,47 @@ nav button {
   font-size: 14px;
   font-weight: 400;
   line-height: 175%;
-
-  color: #8b8d8e;
 }
 
-.bold {
-  font-weight: 700;
-  color: #6f7071;
+/*=====Content Formatting-> Resume=====*/
+
+.resume {
+  padding-top: 40px;
+  margin-bottom: 40px;
+
+  border-top: 2.5px solid #EF5322;
+}
+
+.resume-title {
+  margin-top: 16px;
+  margin-left: 16px;
+
+  font-weight: bold;
+}
+
+.resume-subtitle {
+  margin-bottom: 16px;
+  margin-top: 6px;
+  margin-left: 16px;
+
+  font-size: 14px;
+  font-style: italic;
+}
+
+.resume-bullets {
+  margin-bottom: 14px;
+
+  font-size: 12px;
 }
 
 /*=====Content Formatting-> Projects=====*/
+
+.projects {
+  padding-top: 40px;
+  margin-bottom: 40px;
+
+  border-top: 2.5px solid #EF5322;
+}
 
 .contact-container {
   display: flex;
