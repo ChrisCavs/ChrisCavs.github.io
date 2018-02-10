@@ -279,7 +279,7 @@ nav button {
 
 .contact {
   padding-top: 100px;
-  margin-bottom: 120px;
+  margin-bottom: 200px;
 
   border-top: 2.5px solid #EF5322;
 }
@@ -317,7 +317,7 @@ nav button {
 @include min($tablet) {
   .fadeLeft {
     opacity: 0;
-    transform: translateX(-30%);
+    transform: translateX(-10%);
     transition: all 0.5s;
   }
 
@@ -328,12 +328,12 @@ nav button {
 
   .fadeRight {
     opacity: 0;
-    transform: translateY(30%);
+    transform: translateX(10%);
     transition: all 0.5s;
   }
 
   .fadeRight.active {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }
