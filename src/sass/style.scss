@@ -70,6 +70,13 @@ nav button {
     }
 
 /*=====Content Formatting-> Background=====*/
+.background {
+  @include min($tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .background-linkedin {
   width: 300px;
@@ -87,6 +94,7 @@ nav button {
 
   @include min($tablet) {
     margin-right: 8%;
+    margin-left: 0;
   }
 }
 
@@ -100,6 +108,9 @@ nav button {
     justify-content: center;
 
     width: 40%;
+
+    margin-top: none;
+    margin-bottom: none;
   }
 }
 
