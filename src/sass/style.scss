@@ -91,11 +91,16 @@ nav button {
 }
 
 .background-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
-  width: 35%;
+  @include min($tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 40%;
+  }
 }
 
 .background-content-title {
