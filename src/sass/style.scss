@@ -22,12 +22,12 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
 
   color: #8b8d8e;
 
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 }
 
 .bold {
@@ -91,6 +91,8 @@ nav button {
 
 /*=====Content Formatting-> Background=====*/
 .background {
+  margin-bottom: 60px;
+
   @include min($tablet) {
     display: flex;
     align-items: center;
@@ -152,39 +154,55 @@ nav button {
 /*=====Content Formatting-> Resume=====*/
 
 .resume {
-  padding-top: 40px;
-  margin-bottom: 40px;
+  padding-top: 60px;
+  margin-bottom: 60px;
 
   border-top: 2.5px solid #EF5322;
 }
 
 .resume-title {
   margin-top: 16px;
-  margin-left: 16px;
 
+  font-size: 16px;
   font-weight: bold;
+
+  @include min($tablet) {
+    margin-left: 16px;
+    margin-top: 24px;
+  }
 }
 
 .resume-subtitle {
-  margin-bottom: 16px;
+  margin-bottom: 30px;
   margin-top: 6px;
-  margin-left: 16px;
 
   font-size: 14px;
   font-style: italic;
+
+  @include min($tablet) {
+    margin-left: 16px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
 }
 
 .resume-bullets {
-  margin-bottom: 14px;
+  margin-bottom: 30px;
+  margin-left: 32px;
 
   font-size: 12px;
+
+  @include min($tablet) {
+    margin-left: 64px;
+    font-size: 14px;
+  }
 }
 
 /*=====Content Formatting-> Projects=====*/
 
 .projects {
-  padding-top: 40px;
-  margin-bottom: 40px;
+  padding-top: 60px;
+  margin-bottom: 60px;
 
   border-top: 2.5px solid #EF5322;
 }
