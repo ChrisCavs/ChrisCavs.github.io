@@ -1,10 +1,15 @@
-import React from 'react';
-import Button from '@mui/material/Button';
+import React from 'react'
+
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+import Homepage from './Components/Homepage/Homepage';
 
 function App() {
   return (
     <div className="App">
-      <Button variant="contained">Hello World</Button>
+      <Header />
+      <Homepage />
+      <Footer />
     </div>
   );
 }
