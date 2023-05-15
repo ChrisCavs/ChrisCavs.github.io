@@ -82,12 +82,6 @@ const Homepage = (props) => {
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
-                                <ScreenShare />
-                            </ListItemIcon>
-                            <ListItemText primary="Develop open-source projects" />
-                        </ListItem>
-                        <ListItem>
-                            <ListItemIcon>
                                 <Favorite />
                             </ListItemIcon>
                             <ListItemText primary="Work with engineers that share my passion" />
