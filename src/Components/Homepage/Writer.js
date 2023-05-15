@@ -1,11 +1,10 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Typewriter from 't-writer.js'
 import { Typography } from '@mui/material'
 
-let writerStarted = false
-
 const Writer = (props) => {
     const target = useRef(null)
+    const [writerStarted, setStarted] = useState(false);
 
     useEffect(() => {
         if (target.current && !writerStarted) {
@@ -24,9 +23,9 @@ const Writer = (props) => {
                 'Coffee Aficionado...',
                 'TypeScript Technologist...',
             ).start()
-            writerStarted = true
+            setStarted(true)
         }
-    }, [])
+    }, [writerStarted])
 
     return (
         <Typography ref={target} variant="h2" component="div" color />
