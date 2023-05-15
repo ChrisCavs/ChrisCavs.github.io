@@ -11,7 +11,7 @@ const Contact = (props) => {
                         <ListItemIcon>
                             <GitHub />
                         </ListItemIcon>
-                        <ListItemText primary="Github" />
+                        <ListItemText primary="GitHub" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>

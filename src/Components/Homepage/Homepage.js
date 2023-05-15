@@ -43,7 +43,7 @@ const Homepage = (props) => {
                             <ListItemIcon>
                                 <PestControl />
                             </ListItemIcon>
-                            <ListItemText primary="Obsession bug hunter" />
+                            <ListItemText primary="Obsessive bug hunter" />
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
