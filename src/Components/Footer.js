@@ -9,11 +9,11 @@ const Footer = (props) => {
     const navigate = useNavigate()
     const isMobile = useContext(MobileContext)
     const bottomNav = isMobile ? (
-        <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0}} elevation={3}>
+        <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 2}} elevation={3}>
             <BottomNavigation showLabels value={value} onChange={(e, newVal) => setValue(newVal)}>
                 <BottomNavigationAction label="Home" icon={<Home />} onClick={() => navigate('/')} />
                 <BottomNavigationAction label="Projects" icon={<Folder />} onClick={() => navigate('/projects')} />
-                <BottomNavigationAction label="Open-Source" icon={<Code />} onClick={() => navigate('/open-source')} />
+                <BottomNavigationAction label="OpenSource" icon={<Code />} onClick={() => navigate('/open-source')} />
                 <BottomNavigationAction label="Contact" icon={<ContactPage />} onClick={() => navigate('/contact')} />
             </BottomNavigation>
         </Paper>

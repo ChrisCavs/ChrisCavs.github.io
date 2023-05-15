@@ -24,7 +24,7 @@ const SearchBox = (props) => {
     }
 
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: isMobile ? '340px' : '380px' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: isMobile ? '340px' : '380px', margin: '20px 0 50px 0' }}>
             <Autocomplete
                 options={options}
                 sx={{ width: isMobile ? 250 : 300 }}

@@ -24,9 +24,9 @@ const Header = (props) => {
 
     return (
         <>
-            <AppBar component="nav">
+            <AppBar component="nav" sx={{ maxWidth: '800px', left: '50%', transform: 'translateX(-50%)'}}>
                 <Toolbar>
-                    <Box sx={{ display: 'flex', flexGrow: 1, maxWidth: '1000px', alignItems: 'center', margin: 'auto' }}>
+                    <Box sx={{ display: 'flex', flexGrow: 1, maxWidth: '800px', alignItems: 'center', margin: 'auto' }}>
                         <Avatar alt="Chris Cavalea" src={avatarImage} onClick={() => navigate('/')} sx={{ cursor: 'pointer' }} />
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1, marginLeft: '16px'}}>Chris Cavalea</Typography>
                         <Divider />
