@@ -3,7 +3,7 @@ import { MobileContext } from '../../App'
 import SearchBox from './SearchBox'
 
 import { Typography, Box, Divider, List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
-import { Announcement, Build, Code, Favorite, Group, Lightbulb, PestControl, Science, ScreenShare, Web } from '@mui/icons-material'
+import { Announcement, Build, Code, Favorite, Group, Lightbulb, PestControl, Science, Web } from '@mui/icons-material'
 
 const Homepage = (props) => {
     const isMobile = useContext(MobileContext)
