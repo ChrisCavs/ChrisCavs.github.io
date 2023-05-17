@@ -1,10 +1,21 @@
 import React, { useContext } from 'react'
 import { Box, Typography } from '@mui/material'
+
 import MeadImg from '../Static/Mead.png'
+import ChrisCavsImg from '../Static/ChrisCavs.png'
 import CardWrapper from './CardWrapper'
 import { MobileContext } from '../App'
 
 const projects = [
+    {
+        title: 'ChrisCavs.Github.io',
+        body: 'My personal website, made with React + Material UI',
+        gitUrl: 'https://github.com/ChrisCavs/ChrisCavs.github.io',
+        image: {
+            image: ChrisCavsImg,
+            title: 'Chris Cavalea personal website project',
+        },
+    },
     {
         title: 'Mead',
         body: 'A fancy Medium clone, built on React/Redux + Rails',

@@ -5,9 +5,10 @@ import { Home, Folder, Code, ContactPage } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 
 const Footer = (props) => {
-    const [value, setValue] = useState(0)
     const navigate = useNavigate()
     const isMobile = useContext(MobileContext)
+    const [value, setValue] = useState(0)
+
     const bottomNav = isMobile ? (
         <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 2}} elevation={3}>
             <BottomNavigation showLabels value={value} onChange={(e, newVal) => setValue(newVal)}>
