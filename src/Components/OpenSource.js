@@ -5,6 +5,12 @@ import { MobileContext } from '../App'
 
 const openSource = [
     {
+        title: 'Aimless.js',
+        body: 'The missing JS randomness library',
+        gitUrl: 'https://github.com/ChrisCavs/aimless.js',
+        demoUrl: 'https://chriscavs.github.io/aimless-demo',
+    },
+    {
         title: 'Rallax.js',
         body: 'Dead simple parallax scrolling',
         gitUrl: 'https://github.com/ChrisCavs/rallax.js',
