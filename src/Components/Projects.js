@@ -1,10 +1,9 @@
-import React, { useContext } from 'react'
-import { Box, Typography } from '@mui/material'
+import React from 'react'
+import { Box } from '@mui/material'
 
 import MeadImg from '../Static/Mead.png'
 import ChrisCavsImg from '../Static/ChrisCavs.png'
 import CardWrapper from './CardWrapper'
-import { MobileContext } from '../App'
 
 const projects = [
     {
@@ -27,28 +26,18 @@ const projects = [
     },
 ]
 
-const Projects = (props) => {
-    const isMobile = useContext(MobileContext)
-
-    return (
-        <Box sx={{
-            display: 'flex',
-            maxWidth: '800px',
-            margin: '60px auto',
-            marginTop: isMobile ? '20px' : '60px',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-        }}>
-            {projects.map((propObj) => (
-                <CardWrapper {...propObj} />
-            ))}
-            <Box sx={{width: '350px', margin: '20px'}}>
-                <Typography variant="h6" sx={{marginBottom: '10px'}}>More to come</Typography>
-                <Typography variant="body1">A ChatGPT integration, Lessons in React, who knows what else...</Typography>
-            </Box>
-        </Box>
-    )
-}
+const Projects = () => (
+    <Box sx={{
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+    }}>
+        {projects.map((propObj) => (
+            <CardWrapper {...propObj} />
+        ))}
+    </Box>
+)
 
 export default Projects

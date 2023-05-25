@@ -1,11 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
-import Homepage from './Components/Homepage/Homepage'
-import Projects from './Components/Projects'
-import OpenSource from './Components/OpenSource'
-import Contact from './Components/Contact'
+import Homepage from './Components/Homepage'
 
 export const MobileContext = createContext(null)
 
@@ -24,12 +20,7 @@ function App() {
     <MobileContext.Provider value={width <= 768}>
       <div className="App">
         <Header />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/open-source" element={<OpenSource />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <Homepage />
         <Footer />
       </div>
     </MobileContext.Provider>

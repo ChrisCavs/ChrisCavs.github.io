@@ -1,28 +1,38 @@
-import React, { useContext, useState } from 'react'
-import { MobileContext } from '../App'
+import React, { useContext } from 'react'
+import jump from 'jump.js'
 import { BottomNavigation, BottomNavigationAction, Paper } from '@mui/material'
 import { Home, Folder, Code, ContactPage } from '@mui/icons-material'
-import { useNavigate } from 'react-router-dom'
+import { MobileContext } from '../App'
 
-const Footer = (props) => {
-    const navigate = useNavigate()
+const Footer = () => {
     const isMobile = useContext(MobileContext)
-    const [value, setValue] = useState(0)
 
-    const bottomNav = isMobile ? (
+    return isMobile ? (
         <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 2}} elevation={3}>
-            <BottomNavigation showLabels value={value} onChange={(e, newVal) => setValue(newVal)}>
-                <BottomNavigationAction label="Home" icon={<Home />} onClick={() => navigate('/')} />
-                <BottomNavigationAction label="Projects" icon={<Folder />} onClick={() => navigate('/projects')} />
-                <BottomNavigationAction label="OpenSource" icon={<Code />} onClick={() => navigate('/open-source')} />
-                <BottomNavigationAction label="Contact" icon={<ContactPage />} onClick={() => navigate('/contact')} />
+            <BottomNavigation showLabels>
+                <BottomNavigationAction
+                    label="About"
+                    icon={<Home />}
+                    onClick={() => jump('.about', { offset: -86 })}
+                />
+                <BottomNavigationAction
+                    label="OpenSource"
+                    icon={<Code />}
+                    onClick={() => jump('.open-source', { offset: -86 })}
+                />
+                <BottomNavigationAction
+                    label="Projects"
+                    icon={<Folder />}
+                    onClick={() => jump('.projects', { offset: -86 })}
+                />
+                <BottomNavigationAction
+                    label="Contact"
+                    icon={<ContactPage />}
+                    onClick={() => jump('.contact', { offset: -86 })}
+                />
             </BottomNavigation>
         </Paper>
     ) : null
-
-    return (
-        <>{bottomNav}</>
-    )
 }
 
 export default Footer

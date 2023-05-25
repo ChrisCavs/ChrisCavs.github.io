@@ -4,7 +4,7 @@ import React from 'react'
 
 const Contact = (props) => {
     return (
-        <Box sx={{ margin: '40px auto', maxWidth: '800px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
             <List>
                 <ListItem disablePadding>
                     <ListItemButton href="https://github.com/ChrisCavs" target="_blank">
