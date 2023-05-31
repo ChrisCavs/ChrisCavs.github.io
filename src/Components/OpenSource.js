@@ -8,7 +8,7 @@ const openSource = [
         body: 'The missing JS randomness library',
         gitUrl: 'https://github.com/ChrisCavs/aimless.js',
         demoUrl: 'https://chriscavs.github.io/aimless-demo',
-        stars: '258',
+        stars: '338',
     },
     {
         title: 'Rallax.js',
@@ -22,7 +22,7 @@ const openSource = [
         body: 'Asynchronous boundary detection',
         gitUrl: 'https://github.com/ChrisCavs/bounds.js',
         demoUrl: 'https://chriscavs.github.io/bounds-demo',
-        stars: '631',
+        stars: '632',
     },
     {
         title: 'T-Writer.js',
