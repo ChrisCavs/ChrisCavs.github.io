@@ -8,7 +8,7 @@ const openSource = [
         body: 'The missing JS randomness library',
         gitUrl: 'https://github.com/ChrisCavs/aimless.js',
         demoUrl: 'https://chriscavs.github.io/aimless-demo',
-        stars: '338',
+        stars: '537',
     },
     {
         title: 'Rallax.js',
