@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { ThemeContext } from '../App';
 
 import { ReactComponent as ArrowUp } from '../Icons/arrowUp.svg'
 import { ReactComponent as Bug } from '../Icons/bug.svg'
@@ -22,15 +21,14 @@ const iconMap = {
     Question,
 }
 
-const Block = (props) => {
-    const theme = useContext(ThemeContext)
-    const Icon = iconMap[props.icon]
+const Block = ({icon, text}) => {
+    const Icon = iconMap[icon]
     return (
-        <StyledBlock theme={theme}>
+        <StyledBlock>
             <IconWrapper>
                 <Icon fill="currentColor" stroke="currentColor" />
             </IconWrapper>
-            <div>{props.text}</div>
+            <div>{text}</div>
         </StyledBlock>
     )
 }

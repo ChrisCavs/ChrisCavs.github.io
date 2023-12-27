@@ -1,9 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react'
 import Header from './Components/Header'
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 export const MobileContext = createContext(null)
-export const ThemeContext = createContext(null)
 
 const darkTheme = {
   background: '#191A1C',
@@ -14,7 +13,6 @@ const darkTheme = {
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth)
-  const [theme] = useState(darkTheme)
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth)
@@ -25,15 +23,15 @@ function App() {
   }, [])
 
   return (
-    <MobileContext.Provider value={width <= 768}>
-      <ThemeContext.Provider value={theme}>
-        <AppContainer theme={theme}>
+    <ThemeProvider theme={darkTheme}>
+      <MobileContext.Provider value={width <= 768}>
+        <AppContainer>
           <AppContainerInner>
             <Header />
           </AppContainerInner>
         </AppContainer>
-      </ThemeContext.Provider>
-    </MobileContext.Provider>
+      </MobileContext.Provider>
+    </ThemeProvider>
   );
 }
 

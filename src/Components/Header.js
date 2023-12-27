@@ -3,6 +3,7 @@ import jump from 'jump.js'
 import avatarImage from '../Static/avatar.jpeg'
 import { MobileContext } from '../App'
 import Block from '../Library/block'
+import { StarButton, StyledButton } from '../Library/button'
 
 const navItems = [
     { name: 'Open Source', onClick: () => jump('.open-source')},
@@ -14,7 +15,15 @@ const Header = () => {
     const isMobile = useContext(MobileContext)
 
     return (
-        <Block icon="Eye" text="Frontend developer" />
+        <>
+            <Block icon="Eye" text="Frontend developer" />
+            <StyledButton variant="primary">
+                GitHub
+            </StyledButton>
+            <StarButton>
+                1.5k
+            </StarButton>
+        </>
     )
 }
 
