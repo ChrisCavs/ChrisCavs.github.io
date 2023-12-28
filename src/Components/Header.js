@@ -4,6 +4,7 @@ import avatarImage from '../Static/avatar.jpeg'
 import { MobileContext } from '../App'
 import Block from '../Library/block'
 import { StarButton, StyledButton } from '../Library/button'
+import Link from '../Library/link'
 
 const navItems = [
     { name: 'Open Source', onClick: () => jump('.open-source')},
@@ -23,6 +24,7 @@ const Header = () => {
             <StarButton>
                 1.5k
             </StarButton>
+            <Link>Open Source</Link>
         </>
     )
 }

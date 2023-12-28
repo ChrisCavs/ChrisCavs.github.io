@@ -1,7 +1,9 @@
-import React, { useContext } from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
-import { ReactComponent as Star } from '../Icons/star.svg'
+import { iconMap, getThemeProp } from './utils'
+
+const Star = iconMap['Star']
 
 const StyledButton = ({ onClick, children }) => (
     <PrimaryButtonContainer onClick={onClick}>
@@ -18,34 +20,34 @@ const StarButton = ({ onClick, children }) => (
     </SecondaryButtonContainer>
 )
 
-const buttonBaseStyles = `
-    padding: 12px 14px;
-    font-size: 16px;
+const baseButtonStyles = `
+    padding: 7px 9px;
+    font-size: 11px;
     font-weight: 500;
-    line-height: 16px;
-    letter-spacing: 2.8px;
+    line-height: 11px;
+    letter-spacing: 0.8px;
     border-radius: 18px;
     border-style: unset;
     cursor: pointer;
 `
 
 const PrimaryButtonContainer = styled.button`
-    ${buttonBaseStyles}
-    color: ${({ theme }) => theme.background};
-    background-color: ${({ theme }) => theme.text};
+    ${baseButtonStyles}
+    color: ${getThemeProp('background')};
+    background-color: ${getThemeProp('text')};
 `
 
 const SecondaryButtonContainer = styled.button`
-    ${buttonBaseStyles}
+    ${baseButtonStyles}
     display: flex;
-    color: ${({ theme }) => theme.text};
-    border: 1px solid ${({ theme }) => theme.text};
-    background-color: ${({ theme }) => theme.background};
+    color: ${getThemeProp('text')};
+    border: 1px solid ${getThemeProp('text') };
+    background-color: ${getThemeProp('background')};
 `
 
 const IconWrapper = styled.div`
-    width: 14px;
-    height: 10.4px;
+    width: 10px;
+    height: 10px;
     margin-right: 4px;
 `
 
