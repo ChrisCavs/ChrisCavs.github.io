@@ -2,53 +2,49 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { iconMap, getThemeProp } from './utils'
+import Spacer from './spacer'
+import StyledIcon from './icon'
 
 const Star = iconMap['Star']
 
-const StyledButton = ({ onClick, children }) => (
-    <PrimaryButtonContainer onClick={onClick}>
+const StyledButton = ({ href, children }) => (
+    <PrimaryButtonContainer href={href} target="_blank">
         {children}
     </PrimaryButtonContainer>
 )
 
-const StarButton = ({ onClick, children }) => (
-    <SecondaryButtonContainer onClick={onClick}>
-        <IconWrapper>
-            <Star fill="currentColor" stroke="currentColor" />
-        </IconWrapper>
+const StarButton = ({ href, children }) => (
+    <SecondaryButtonContainer href={href} target="_blank">
+        <StyledIcon Icon={Star} type="star" />
+        <Spacer width="4px" />
         {children}
     </SecondaryButtonContainer>
 )
 
 const baseButtonStyles = `
-    padding: 7px 9px;
+    display: inline-block;
+    padding: 7px 10px;
     font-size: 11px;
     font-weight: 500;
-    line-height: 11px;
+    line-height: 10.8px;
     letter-spacing: 0.8px;
     border-radius: 18px;
     border-style: unset;
+    text-decoration: none;
     cursor: pointer;
 `
 
-const PrimaryButtonContainer = styled.button`
+const PrimaryButtonContainer = styled.a`
     ${baseButtonStyles}
     color: ${getThemeProp('background')};
     background-color: ${getThemeProp('text')};
 `
 
-const SecondaryButtonContainer = styled.button`
+const SecondaryButtonContainer = styled.a`
     ${baseButtonStyles}
-    display: flex;
     color: ${getThemeProp('text')};
     border: 1px solid ${getThemeProp('text') };
     background-color: ${getThemeProp('background')};
-`
-
-const IconWrapper = styled.div`
-    width: 10px;
-    height: 10px;
-    margin-right: 4px;
 `
 
 export { StyledButton, StarButton }

@@ -7,6 +7,7 @@ import { ReactComponent as Person } from '../Icons/person.svg'
 import { ReactComponent as Js } from '../Icons/js.svg'
 import { ReactComponent as Question } from '../Icons/question.svg'
 import { ReactComponent as Star } from '../Icons/star.svg'
+import { ReactComponent as Github } from '../Icons/github.svg'
 
 const iconMap = {
     Eye,
@@ -18,6 +19,7 @@ const iconMap = {
     Js,
     Question,
     Star,
+    Github,
 }
 
 const getThemeProp = (key) => ({ theme }) => theme[key]
