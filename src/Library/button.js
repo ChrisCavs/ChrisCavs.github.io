@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { iconMap, getThemeProp } from './utils'
+import { iconMap, getThemeProp, ifDesktop } from './utils'
 import Spacer from './spacer'
 import StyledIcon from './icon'
 
@@ -34,17 +34,31 @@ const baseButtonStyles = `
     cursor: pointer;
 `
 
+const baseDesktopStyles = `
+    font-size: 16px;
+    line-height: 16px;
+`
+
 const PrimaryButtonContainer = styled.a`
     ${baseButtonStyles}
     color: ${getThemeProp('background')};
     background-color: ${getThemeProp('text')};
+
+    ${ifDesktop(`
+        ${baseDesktopStyles}
+        padding: 12px 16px;
+    `)}
 `
 
 const SecondaryButtonContainer = styled.a`
     ${baseButtonStyles}
     color: ${getThemeProp('text')};
     border: 1px solid ${getThemeProp('text') };
-    background-color: ${getThemeProp('background')};
+
+    ${ifDesktop(`
+        ${baseDesktopStyles}
+        padding: 11px 12px;
+    `)}
 `
 
 export { StyledButton, StarButton }

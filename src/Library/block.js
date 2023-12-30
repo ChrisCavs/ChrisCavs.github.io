@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { iconMap, getThemeProp } from './utils'
+import { iconMap, getThemeProp, ifDesktop } from './utils'
 import StyledIcon from './icon'
 import { SmallText } from './copy'
 import Spacer from './spacer'
@@ -26,6 +26,10 @@ const StyledBlock = styled.div`
     border-radius: 14px;
     box-sizing: border-box;
     background-color: ${getThemeProp('secondary')};
+
+    ${ifDesktop(`
+        
+    `)}
 `
 
 export default Block
