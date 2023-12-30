@@ -2,8 +2,6 @@ import React, { createContext, useEffect, useState } from 'react'
 import Header from './Components/Header'
 import styled, { ThemeProvider } from 'styled-components'
 
-export const MobileContext = createContext(null)
-
 const darkTheme = {
   background: '#191A1C',
   secondary: '#28292B',
@@ -22,15 +20,18 @@ function App() {
     }
   }, [])
 
+  const theme = {
+    ...darkTheme,
+    isDesktop: width >= 768,
+  }
+
   return (
-    <ThemeProvider theme={darkTheme}>
-      <MobileContext.Provider value={width <= 768}>
+    <ThemeProvider theme={theme}>
         <AppContainer>
           <AppContainerInner>
             <Header />
           </AppContainerInner>
         </AppContainer>
-      </MobileContext.Provider>
     </ThemeProvider>
   );
 }

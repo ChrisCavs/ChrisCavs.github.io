@@ -19,8 +19,6 @@ const navItems = [
 ]
 
 const Header = () => {
-    const isMobile = useContext(MobileContext)
-
     return (
         <>
             <Block icon="Eye" text="Frontend developer" />
@@ -45,11 +43,7 @@ const Header = () => {
                 src={chriscavsImage}
                 alt="personal website"
             />
-            <ContactLink>
-                <StyledIcon Icon={iconMap['Github']} type="contact" />
-                <Spacer width="9.5px" />
-                GitHub
-            </ContactLink>
+            <ContactLink Icon={iconMap['Github']} text="GitHub"/>
             <SectionTitle title="Contact" num="04" />
             <PageTitle>Chris Cavalea</PageTitle>
             <PageSubtitle>I'm a frontend developer building bespoke user interfaces that deliver a fantastic user experience. I like working with teams of engineers that share my passion, and companies that challenge the status quo.</PageSubtitle>

@@ -23,8 +23,10 @@ const iconMap = {
 }
 
 const getThemeProp = (key) => ({ theme }) => theme[key]
+const ifDesktop = (styles) => ({ theme }) => theme['isDesktop'] && styles
 
 export {
     iconMap,
     getThemeProp,
+    ifDesktop,
 }

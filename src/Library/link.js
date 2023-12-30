@@ -1,47 +1,40 @@
 import React, { useContext } from "react"
-import styled from "styled-components"
+import styled, { ThemeContext } from "styled-components"
 import jump from "jump.js"
 
-import { MobileContext } from "../App"
-import { getThemeProp } from "./utils"
+import { LargeText, XSmallText } from "./copy"
+import StyledIcon from "./icon"
+import Spacer from "./spacer"
 
 const Link = ({ children, target }) => {
-    const isMobile = useContext(MobileContext)
-    const content = isMobile
-        ? children
-        : `[ ${children} ]`
+    const isDesktop = useContext(ThemeContext).isDesktop
+    const content = isDesktop
+        ? `[ ${children} ]`
+        : children
     return (
-        <StyledLink onClick={() => jump(target)}>
+        <XSmallText
+            style={{cursor: 'pointer'}}
+            onClick={() => jump(target)}
+        >
             {content}
-        </StyledLink>
+        </XSmallText>
     )
 }
 
-const ContactLink = ({ href, children }) => {
-    const isMobile = useContext(MobileContext)
+const ContactLink = ({ href, text, Icon }) => {
     return (
-        <StyledContactLink href={href} target="_blank">
-            {children}
-        </StyledContactLink>
+        <ContactContainer href={href} target="_blank">
+            <StyledIcon Icon={Icon} type="contact" />
+            <Spacer width="9.5px" />
+            <LargeText>{text}</LargeText>
+        </ContactContainer>
     )
 }
 
-const StyledLink = styled.span`
-    font-size: 10px;
-    line-height: 12px;
-    letter-spacing: 0.22px;
-    cursor: pointer;
-    color: ${getThemeProp('text')}
-`
-
-const StyledContactLink = styled.a`
+const ContactContainer = styled.a`
     display: flex;
     align-items: center;
-    font-size: 13.93px;
-    line-height: 16.72px;
-    letter-spacing: 0.22px;
     cursor: pointer;
-    color: ${getThemeProp('text')}
 `
 
 export {

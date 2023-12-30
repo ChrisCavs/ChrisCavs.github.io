@@ -3,13 +3,16 @@ import styled from 'styled-components'
 
 import { iconMap, getThemeProp } from './utils'
 import StyledIcon from './icon'
+import { SmallText } from './copy'
+import Spacer from './spacer'
 
 const Block = ({icon, text}) => {
     const Icon = iconMap[icon]
     return (
         <StyledBlock>
             <StyledIcon Icon={Icon} type="block" />
-            <div>{text}</div>
+            <Spacer width="10px" />
+            <SmallText>{text}</SmallText>
         </StyledBlock>
     )
 }
@@ -19,10 +22,9 @@ const StyledBlock = styled.div`
     align-items: center;
     width: 300px;
     height: 47.5px;
-    font-size: 11px;
-    line-height: 14.4px;
+    padding: 0 15px;
     border-radius: 14px;
-    color: ${getThemeProp('text')};
+    box-sizing: border-box;
     background-color: ${getThemeProp('secondary')};
 `
 

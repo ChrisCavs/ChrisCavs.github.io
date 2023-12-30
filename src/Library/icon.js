@@ -1,29 +1,48 @@
 import React from "react"
 import styled from "styled-components"
 
-import { getThemeProp } from "./utils"
+import { getThemeProp, ifDesktop } from "./utils"
 
 const BlockIconWrapper = styled.div`
+    display: flex;
+    align-items: center;
     width: 14px;
-    height: 10.4px;
-    margin-right: 10px;
-    margin-left: 15px;
+    height: 14px;
+    color: ${getThemeProp('text')};
+
+    ${ifDesktop(`
+        width: 20px;
+        height: 20px;
+    `)}
 `
 
 const StarIconWrapper = styled.div`
     display: inline-block;
     width: 9.6px;
     height: 9.1px;
+    color: ${getThemeProp('text')};
+
+    ${ifDesktop(`
+        width: 14.25px;
+        height: 13.55px;
+    `)}
 `
 
 const ContactIconWrapper = styled.div`
     display: flex;
-    width: 27px;
-    height: 27px;
+    width: 27.16px;
+    height: 27.16px;
     padding: 6px;
     box-sizing: border-box;
     border-radius: 8.5px;
     border: 1px solid ${getThemeProp('secondary')};
+
+    ${ifDesktop(`
+        width: 34.69px;
+        height: 34.69px;
+        padding: 8px;
+        border-radius: 10.88px;
+    `)}
 `
 
 const wrapperMap = {

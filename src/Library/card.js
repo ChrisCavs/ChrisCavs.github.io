@@ -1,19 +1,23 @@
-import React from "react"
-import styled from "styled-components"
+import React, { useContext } from "react"
+import styled, { ThemeContext } from "styled-components"
 
 import { StarButton, StyledButton } from "./button"
-import { getThemeProp } from "./utils"
+import { getThemeProp, ifDesktop } from "./utils"
 import Spacer from "./spacer"
+import { MediumText, XLargeText } from "./copy"
 
 const Card = ({ title, subtitle, stars, gitLink, demoLink }) => {
+    const isDesktop = useContext(ThemeContext).isDesktop
     return (
         <CardContainer>
             <CardTitleContainer>
                 <ThemeDot />
-                <Spacer width="10px" />
-                <CardTitle>{title}</CardTitle>
+                <Spacer width={isDesktop ? "15px" : "10px"} />
+                <XLargeText>{title}</XLargeText>
             </CardTitleContainer>
-            <CardSubtitle>{subtitle}</CardSubtitle>
+            <Spacer height={isDesktop ? "30px" : "20px"} />
+            <MediumText>{subtitle}</MediumText>
+            <Spacer height={isDesktop ? "70px" : "50px"} />
             <ButtonContainer>
                 <div>
                     <StyledButton href={gitLink}>GitHub</StyledButton>
@@ -27,15 +31,19 @@ const Card = ({ title, subtitle, stars, gitLink, demoLink }) => {
 }
 
 const ImageCard = ({ title, subtitle, gitLink, src, alt }) => {
+    const isDesktop = useContext(ThemeContext).isDesktop
     return (
         <CardContainer>
             <CardTitleContainer>
                 <ThemeDot />
-                <Spacer width="10px" />
-                <CardTitle>{title}</CardTitle>
+                <Spacer width={isDesktop ? "15px" : "10px"} />
+                <XLargeText>{title}</XLargeText>
             </CardTitleContainer>
-            <ImageCardSubtitle>{subtitle}</ImageCardSubtitle>
+            <Spacer height={isDesktop ? "30px" : "20px"} />
+            <MediumText style={{ width: '60%' }}>{subtitle}</MediumText>
+            <Spacer height={isDesktop ? "30px" : "20px"} />
             <StyledButton href={gitLink}>GitHub</StyledButton>
+            <Spacer height={isDesktop ? "48px" : "29px"} />
             <ImageCardImage src={src} alt={alt} />
         </CardContainer>
     )
@@ -47,6 +55,12 @@ const CardContainer = styled.div`
     border-radius: 16.85px;
     box-sizing: border-box;
     background-color: ${getThemeProp('secondary')};
+
+    ${ifDesktop(`
+        width: 625px;
+        padding: 30px;
+        border-radius: 25px;
+    `)}
 `
 
 const ButtonContainer = styled.div`
@@ -58,35 +72,15 @@ const ButtonContainer = styled.div`
 const CardTitleContainer = styled.div`
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    line-height: 16.18px;
-`
-
-const CardTitle = styled.h3`
-    margin: 0;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.75px;
-    color: ${getThemeProp('text')};
-`
-
-const CardSubtitle = styled.span`
-    display: block;
-    margin-bottom: 50px;
-    font-size: 12px;
-    line-height: 16.18px;
-    color: ${getThemeProp('text')};
-`
-
-const ImageCardSubtitle = styled(CardSubtitle)`
-    width: 60%;
-    margin-bottom: 20px;
 `
 
 const ImageCardImage = styled.img`
     width: 100%;
-    margin-top: 29px;
     border-radius: 5.65px;
+
+    ${ifDesktop(`
+        border-radius: 12.5px;
+    `)}
 `
 
 const ThemeDot = styled.span`
@@ -94,6 +88,11 @@ const ThemeDot = styled.span`
     height: 8.68px;
     border-radius: 50%;
     background-color: ${getThemeProp('tertiary')};
+
+    ${ifDesktop(`
+        width: 12.88px;
+        height: 12.88px;
+    `)}
 `
 
 export {
