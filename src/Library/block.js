@@ -28,7 +28,10 @@ const StyledBlock = styled.div`
     background-color: ${getThemeProp('secondary')};
 
     ${ifDesktop(`
-        
+        width: 625px;
+        height: 84.54px;
+        padding: 0 28px;
+        border-radius: 25px;
     `)}
 `
 
