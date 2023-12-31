@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useContext } from 'react'
+import styled, { ThemeContext } from 'styled-components'
 
 import { iconMap, getThemeProp, ifDesktop } from './utils'
 import StyledIcon from './icon'
@@ -7,11 +7,12 @@ import { SmallText } from './copy'
 import Spacer from './spacer'
 
 const Block = ({icon, text}) => {
+    const isDesktop = useContext(ThemeContext).isDesktop
     const Icon = iconMap[icon]
     return (
         <StyledBlock>
             <StyledIcon Icon={Icon} type="block" />
-            <Spacer width="10px" />
+            <Spacer width={ isDesktop ? "18px" : "10px"} />
             <SmallText>{text}</SmallText>
         </StyledBlock>
     )
