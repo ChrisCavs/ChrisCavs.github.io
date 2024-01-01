@@ -56,7 +56,7 @@ const PageTitle = styled.h1`
 
     ${ifDesktop(`
         font-size: 49px;
-        line-height: 58.8px;
+        line-height: 55.2px;
     `)}
 `
 

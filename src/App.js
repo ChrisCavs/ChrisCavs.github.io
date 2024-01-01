@@ -1,6 +1,11 @@
-import React, { createContext, useEffect, useState } from 'react'
-import Header from './Components/Header'
+import React, { useEffect, useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
+import { getThemeProp, ifDesktop } from './Library/utils'
+
+import Header from './Components/Header'
+import About from './Components/About'
+import Bio from './Components/Bio'
+import Spacer from './Library/spacer'
 
 const darkTheme = {
   background: '#191A1C',
@@ -23,6 +28,7 @@ function App() {
   const theme = {
     ...darkTheme,
     isDesktop: width >= 768,
+    isBigDesktop: width >= 1150,
   }
 
   return (
@@ -30,6 +36,10 @@ function App() {
         <AppContainer>
           <AppContainerInner>
             <Header />
+            <Spacer height="48px" deskHeight="109px" />
+            <Bio />
+            <Spacer height="35px" deskHeight="107px" />
+            <About />
           </AppContainerInner>
         </AppContainer>
     </ThemeProvider>
@@ -38,12 +48,17 @@ function App() {
 
 const AppContainer = styled.div`
   width: 100%;
-  background-color: ${({ theme }) => theme.background};
+  background-color: ${getThemeProp('background')};
 `
 
 const AppContainerInner = styled.div`
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 30px;
+
+  ${ifDesktop(`
+    padding: 0 69px;
+  `)}
 `
 
 export default App

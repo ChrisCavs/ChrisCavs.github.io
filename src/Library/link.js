@@ -6,8 +6,8 @@ import { LargeText, XSmallText } from "./copy"
 import StyledIcon from "./icon"
 import Spacer from "./spacer"
 
-const Link = ({ children, target }) => {
-    const isDesktop = useContext(ThemeContext).isDesktop
+const NavLink = ({ children, target }) => {
+    const { isDesktop } = useContext(ThemeContext)
     const content = isDesktop
         ? `[ ${children} ]`
         : children
@@ -34,10 +34,12 @@ const ContactLink = ({ href, text, Icon }) => {
 const ContactContainer = styled.a`
     display: flex;
     align-items: center;
+    width: fit-content;
+    text-decoration: none;
     cursor: pointer;
 `
 
 export {
-    Link,
+    NavLink,
     ContactLink,
 }

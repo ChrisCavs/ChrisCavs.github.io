@@ -7,17 +7,17 @@ import Spacer from "./spacer"
 import { MediumText, XLargeText } from "./copy"
 
 const Card = ({ title, subtitle, stars, gitLink, demoLink }) => {
-    const isDesktop = useContext(ThemeContext).isDesktop
+    const { isDesktop } = useContext(ThemeContext)
     return (
         <CardContainer>
             <CardTitleContainer>
                 <ThemeDot />
-                <Spacer width={isDesktop ? "15px" : "10px"} />
+                <Spacer width="10px" deskWidth="15px" />
                 <XLargeText>{title}</XLargeText>
             </CardTitleContainer>
-            <Spacer height={isDesktop ? "30px" : "20px"} />
+            <Spacer height="20px" deskHeight="30px" />
             <MediumText>{subtitle}</MediumText>
-            <Spacer height={isDesktop ? "70px" : "50px"} />
+            <Spacer height="50px" deskHeight="70px" />
             <ButtonContainer>
                 <div>
                     <StyledButton href={gitLink}>GitHub</StyledButton>
@@ -31,19 +31,19 @@ const Card = ({ title, subtitle, stars, gitLink, demoLink }) => {
 }
 
 const ImageCard = ({ title, subtitle, gitLink, src, alt }) => {
-    const isDesktop = useContext(ThemeContext).isDesktop
+    const { isDesktop } = useContext(ThemeContext)
     return (
         <CardContainer>
             <CardTitleContainer>
                 <ThemeDot />
-                <Spacer width={isDesktop ? "15px" : "10px"} />
+                <Spacer width="10px" deskWidth="15px" />
                 <XLargeText>{title}</XLargeText>
             </CardTitleContainer>
-            <Spacer height={isDesktop ? "30px" : "20px"} />
+            <Spacer height="20px" deskHeight="30px" />
             <MediumText style={{ width: '60%' }}>{subtitle}</MediumText>
-            <Spacer height={isDesktop ? "30px" : "20px"} />
+            <Spacer height="20px" deskHeight="30px" />
             <StyledButton href={gitLink}>GitHub</StyledButton>
-            <Spacer height={isDesktop ? "48px" : "29px"} />
+            <Spacer height="29px" deskHeight="48px" />
             <ImageCardImage src={src} alt={alt} />
         </CardContainer>
     )

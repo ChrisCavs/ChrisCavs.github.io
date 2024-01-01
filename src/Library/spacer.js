@@ -1,11 +1,15 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ThemeContext } from "styled-components"
 
-const Spacer = ({ width, height }) => (
-    <span style={{
-        display: `${width ? 'inline-block' : 'block'}`,
-        width: `${width || '0px'}`,
-        height: `${height || '0px'}`
-    }} />
-)
+const Spacer = ({ width, height, deskWidth, deskHeight }) => {
+    const { isDesktop } = useContext(ThemeContext)
+    return (
+        <span style={{
+            display: `${(width || deskWidth) ? 'inline-block' : 'block'}`,
+            width: `${(isDesktop ? deskWidth : width) || '0px'}`,
+            height: `${(isDesktop ? deskHeight : height) || '0px'}`
+        }} />
+    )
+}
 
 export default Spacer

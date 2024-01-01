@@ -5,7 +5,7 @@ import { iconMap, getThemeProp, ifDesktop } from './utils'
 import Spacer from './spacer'
 import StyledIcon from './icon'
 
-const Star = iconMap['Star']
+const Star = iconMap.Star
 
 const StyledButton = ({ href, children }) => (
     <PrimaryButtonContainer href={href} target="_blank">

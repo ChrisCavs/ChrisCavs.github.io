@@ -7,12 +7,12 @@ import { SmallText } from './copy'
 import Spacer from './spacer'
 
 const Block = ({icon, text}) => {
-    const isDesktop = useContext(ThemeContext).isDesktop
+    const { isDesktop } = useContext(ThemeContext)
     const Icon = iconMap[icon]
     return (
         <StyledBlock>
             <StyledIcon Icon={Icon} type="block" />
-            <Spacer width={ isDesktop ? "18px" : "10px"} />
+            <Spacer width="10px" deskWidth="18px" />
             <SmallText>{text}</SmallText>
         </StyledBlock>
     )

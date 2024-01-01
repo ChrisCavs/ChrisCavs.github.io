@@ -35,6 +35,7 @@ const ContactIconWrapper = styled.div`
     padding: 6px;
     box-sizing: border-box;
     border-radius: 8.5px;
+    color: ${getThemeProp('text')};
     border: 1px solid ${getThemeProp('secondary')};
 
     ${ifDesktop(`

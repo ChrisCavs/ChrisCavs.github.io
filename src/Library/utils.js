@@ -8,6 +8,8 @@ import { ReactComponent as Js } from '../Icons/js.svg'
 import { ReactComponent as Question } from '../Icons/question.svg'
 import { ReactComponent as Star } from '../Icons/star.svg'
 import { ReactComponent as Github } from '../Icons/github.svg'
+import { ReactComponent as Linkedin } from '../Icons/linkedin.svg'
+import { ReactComponent as Email } from '../Icons/email.svg'
 
 const iconMap = {
     Eye,
@@ -20,13 +22,17 @@ const iconMap = {
     Question,
     Star,
     Github,
+    Linkedin,
+    Email,
 }
 
 const getThemeProp = (key) => ({ theme }) => theme[key]
 const ifDesktop = (styles) => ({ theme }) => theme['isDesktop'] && styles
+const ifBigDesktop = (styles) => ({ theme }) => theme['isBigDesktop'] && styles
 
 export {
     iconMap,
     getThemeProp,
     ifDesktop,
+    ifBigDesktop,
 }
