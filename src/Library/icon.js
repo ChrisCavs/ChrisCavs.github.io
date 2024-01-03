@@ -61,7 +61,7 @@ const StyledIcon = ({ Icon, type }) => {
   const Wrapper = wrapperMap[type]
   return (
     <Wrapper>
-        <Icon fill="currentColor" stroke="currentColor" />
+      <Icon />
     </Wrapper>
   )
 }
