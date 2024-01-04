@@ -32,6 +32,8 @@ const baseButtonStyles = `
   border-style: unset;
   text-decoration: none;
   cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s;
 `
 
 const baseDesktopStyles = `
@@ -44,6 +46,10 @@ const PrimaryButtonContainer = styled.a`
   color: ${getThemeProp('background')};
   background-color: ${getThemeProp('text')};
 
+  &:hover {
+    transform: scale(1.1);
+  }
+
   ${ifBigDesktop(`
     ${baseDesktopStyles}
     padding: 12px 16px;
@@ -54,6 +60,10 @@ const SecondaryButtonContainer = styled.a`
   ${baseButtonStyles}
   color: ${getThemeProp('text')};
   border: 1px solid ${getThemeProp('text') };
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   ${ifBigDesktop(`
     ${baseDesktopStyles}

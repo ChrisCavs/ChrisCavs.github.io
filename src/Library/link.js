@@ -40,6 +40,12 @@ const ContactContainer = styled.a`
   width: fit-content;
   text-decoration: none;
   cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 export {
