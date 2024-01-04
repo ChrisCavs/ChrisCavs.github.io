@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { getThemeProp, ifBigDesktop, ifDesktop } from './utils'
+import { getThemeProp, ifDesktop } from './utils'
 import { StarButton, StyledButton } from './button'
 import { MediumText, XLargeText } from './copy'
 import Spacer from './spacer'

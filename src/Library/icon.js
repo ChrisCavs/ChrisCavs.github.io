@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { getThemeProp, ifDesktop } from './utils'
+import { getThemeProp, ifBigDesktop } from './utils'
 
 const BlockIconWrapper = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ const BlockIconWrapper = styled.div`
   height: 14px;
   color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     width: 20px;
     height: 20px;
   `)}
@@ -22,7 +22,7 @@ const StarIconWrapper = styled.div`
   height: 9.1px;
   color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     width: 14.25px;
     height: 13.55px;
   `)}
@@ -38,7 +38,7 @@ const ContactIconWrapper = styled.div`
   color: ${getThemeProp('text')};
   border: 2px solid ${getThemeProp('line')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     width: 34.69px;
     height: 34.69px;
     padding: 8px;

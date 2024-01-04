@@ -4,8 +4,8 @@ import { CardArrangement, ImageCard } from '../Library/card'
 import { SectionTitle } from '../Library/copy'
 import Spacer from '../Library/spacer'
 
-import MeadImg from '../Static/mead.png'
-import ChrisCavsImg from '../Static/chriscavs.png'
+import MeadImg from '../Static/Mead.png'
+import ChrisCavsImg from '../Static/ChrisCavs.png'
 
 const projects = [
   {

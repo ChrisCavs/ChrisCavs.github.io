@@ -1,12 +1,40 @@
-import React from 'react';
-import { SectionTitle } from '../Library/copy';
+import React from 'react'
+import styled from 'styled-components'
 
-const About = () => {
-  return (
-    <section className="about">
-      <SectionTitle title="About" num="01" />
-    </section>
-  )
-}
+import { SectionTitle } from '../Library/copy'
+import Block from '../Library/block'
+import Spacer from '../Library/spacer'
+import { ifDesktop } from '../Library/utils'
+
+const blockItems = [
+  { icon: 'Eye', text: 'Frontend developer' },
+  { icon: 'Js', text: 'JavaScript expert' },
+  { icon: 'Bug', text: 'Obsessive bug hunter' },
+  { icon: 'Check', text: 'Practical problem-solver' },
+  { icon: 'ArrowUp', text: 'Builds intuitive experiences at scale' },
+  { icon: 'Question', text: 'Challenges the status quo' },
+  { icon: 'Gear', text: 'Optimizes performance' },
+  { icon: 'Person', text: 'Works with other passionate engineers' },
+]
+
+const About = () => (
+  <section className="about">
+    <SectionTitle title="About" num="01" />
+    <Spacer height="39.3px" deskHeight="67.5px" />
+    <AboutContainer>
+      {blockItems.map((item) => <Block key={item.text} {...item} />)}
+    </AboutContainer>
+  </section>
+)
+
+const AboutContainer = styled.div`
+  width: 100%;
+
+  ${ifDesktop(`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  `)}
+`
 
 export default About
