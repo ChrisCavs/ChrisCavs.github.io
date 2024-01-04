@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { ifDesktop } from '../Library/utils'
 import { SectionTitle } from '../Library/copy'
 import Block from '../Library/block'
 import Spacer from '../Library/spacer'
-import { ifDesktop } from '../Library/utils'
 
 const blockItems = [
   { icon: 'Eye', text: 'Frontend developer' },

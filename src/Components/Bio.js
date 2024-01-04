@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 
-import { iconMap, ifBigDesktop, ifDesktop } from '../Library/utils'
+import { iconMap, ifActive, ifBigDesktop, ifDesktop, useInViewOnce } from '../Library/utils'
 import { PageSubtitle, PageTitle } from '../Library/copy'
 import { ContactLink } from '../Library/link'
 import Spacer from '../Library/spacer'
@@ -10,8 +10,10 @@ import avatar from '../Static/avatar.jpeg'
 
 const Bio = () => {
   const { isBigDesktop } = useContext(ThemeContext)
+  const { ref, inView } = useInViewOnce()
+
   return (
-    <BioContainer className="bio">
+    <BioContainer ref={ref} className="bio" $inView={inView}>
       <LeftSide>
         <AvatarContainer>
           <Avatar alt="avatar" src={avatar} />
@@ -53,6 +55,16 @@ const Bio = () => {
 }
 
 const BioContainer = styled.section`
+  position: relative;
+  left: -100px;
+  opacity: 0;
+  transition: all 1s;
+
+  ${ifActive(`
+    opacity: 1;
+    left: 0;
+  `)}
+
   ${ifBigDesktop(`
     display: flex;
     justify-content: space-between;

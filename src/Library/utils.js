@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
+
 import { ReactComponent as Star } from '../Icons/star.svg'
 import { ReactComponent as Github } from '../Icons/github.svg'
 import { ReactComponent as Linkedin } from '../Icons/linkedin.svg'
@@ -31,10 +34,26 @@ const iconMap = {
 const getThemeProp = (key) => ({ theme }) => theme[key]
 const ifDesktop = (styles) => ({ theme }) => theme['isDesktop'] && styles
 const ifBigDesktop = (styles) => ({ theme }) => theme['isBigDesktop'] && styles
+const ifActive = (styles) => ({ $inView }) => $inView && styles
+
+const useInViewOnce = () => {
+  const [viewState, setViewState] = useState(false)
+  const { ref, inView } = useInView({ threshold: 0.5 })
+
+  useEffect(() => {
+    if (inView && !viewState) {
+      setViewState(true)
+    }
+  }, [viewState, inView])
+
+  return { ref, inView: viewState }
+}
 
 export {
   iconMap,
   getThemeProp,
   ifDesktop,
   ifBigDesktop,
+  ifActive,
+  useInViewOnce,
 }

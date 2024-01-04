@@ -1,15 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { iconMap, getThemeProp, ifDesktop, ifBigDesktop } from './utils'
+import { iconMap, getThemeProp, ifDesktop, ifBigDesktop, useInViewOnce, ifActive } from './utils'
 import { SmallText } from './copy'
 import StyledIcon from './icon'
 import Spacer from './spacer'
 
 const Block = ({ icon, text }) => {
+  const { ref, inView } = useInViewOnce()
   const Icon = iconMap[icon]
   return (
-    <StyledBlock>
+    <StyledBlock ref={ref} $inView={inView}>
       <StyledIcon Icon={Icon} type="block" />
       <Spacer width="10px" deskWidth="18px" />
       <SmallText>{text}</SmallText>
@@ -18,6 +19,8 @@ const Block = ({ icon, text }) => {
 }
 
 const StyledBlock = styled.div`
+  position: relative;
+  left: -100px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -27,6 +30,13 @@ const StyledBlock = styled.div`
   border-radius: 14px;
   box-sizing: border-box;
   background-color: ${getThemeProp('secondary')};
+  opacity: 0;
+  transition: all 1s;
+
+  ${ifActive(`
+    left: 0;
+    opacity: 1;
+  `)}
 
   ${ifDesktop(`
     width: 49.3%;
