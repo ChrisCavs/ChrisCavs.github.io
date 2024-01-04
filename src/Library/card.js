@@ -45,7 +45,7 @@ const ImageCard = ({ title, subtitle1, subtitle2, gitLink, src, alt }) => (
 )
 
 const CardContainer = styled.div`
-  width: 300px;
+  width: 100%;
   padding: 20px;
   margin-bottom: 7.38px;
   border-radius: 16.85px;
@@ -53,7 +53,7 @@ const CardContainer = styled.div`
   background-color: ${getThemeProp('secondary')};
 
   ${ifDesktop(`
-    width: 625px;
+    width: 49.3%;
     padding: 30px;
     margin-bottom: 10px;
     border-radius: 25px;
@@ -97,7 +97,7 @@ const CardArrangement = styled.div`
   flex-direction: column;
   align-items: center;
 
-  ${ifBigDesktop(`
+  ${ifDesktop(`
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;

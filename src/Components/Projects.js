@@ -28,7 +28,7 @@ const projects = [
 
 const Projects = () => (
   <section className="projects">
-    <SectionTitle title="Projects" num="02" />
+    <SectionTitle title="Projects" num="03" />
     <Spacer height="39.3px" deskHeight="67.5px" />
     <CardArrangement>
       {projects.map((item) => (

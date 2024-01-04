@@ -9,6 +9,7 @@ import Bio from './Components/Bio'
 import OpenSource from './Components/OpenSource'
 import Projects from './Components/Projects'
 import Footer from './Components/Footer'
+import About from './Components/About'
 
 const darkTheme = {
   background: '#191A1C',
@@ -43,6 +44,10 @@ function App() {
           <Spacer height="48px" deskHeight="109px" />
           <Bio />
           <Spacer height="35px" deskHeight="107px" />
+          <LineBreak />
+          <Spacer height="16px" deskHeight="22px" />
+          <About />
+          <Spacer height="35px" deskHeight="79px" />
           <LineBreak />
           <Spacer height="16px" deskHeight="22px" />
           <OpenSource />

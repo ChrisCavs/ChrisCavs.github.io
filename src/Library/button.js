@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { iconMap, getThemeProp, ifDesktop } from './utils'
+import { iconMap, getThemeProp, ifBigDesktop } from './utils'
 import StyledIcon from './icon'
 import Spacer from './spacer'
 
@@ -44,7 +44,7 @@ const PrimaryButtonContainer = styled.a`
   color: ${getThemeProp('background')};
   background-color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     ${baseDesktopStyles}
     padding: 12px 16px;
   `)}
@@ -55,7 +55,7 @@ const SecondaryButtonContainer = styled.a`
   color: ${getThemeProp('text')};
   border: 1px solid ${getThemeProp('text') };
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     ${baseDesktopStyles}
     padding: 11px 12px;
   `)}

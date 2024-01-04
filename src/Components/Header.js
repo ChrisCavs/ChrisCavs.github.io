@@ -1,25 +1,30 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useContext } from 'react'
+import styled, { ThemeContext } from 'styled-components'
 
 import { getThemeProp, ifDesktop } from '../Library/utils'
 import { NavLink } from '../Library/link';
 import Spacer from '../Library/spacer'
 
-const Header = () => (
-  <>
-    <Spacer height="29px" deskHeight="42px" />
-    <HeaderContainer>
-      <Logo>{"<C/C>"}</Logo>
-      <NavContainer>
-        <NavLink target=".open-source">Open Source</NavLink>
-        <Spacer width="20px" deskWidth="45px" />
-        <NavLink target=".projects">Projects</NavLink>
-        <Spacer width="20px" deskWidth="45px" />
-        <NavLink target=".contact">Contact</NavLink>
-      </NavContainer>
-    </HeaderContainer>
-  </>
-)
+const Header = () => {
+  const { isDesktop } = useContext(ThemeContext)
+  return (
+    <>
+      <Spacer height="29px" deskHeight="42px" />
+      <HeaderContainer>
+        <Logo>{"<C/C>"}</Logo>
+        <NavContainer>
+          {isDesktop && <NavLink target=".about">About</NavLink>}
+          <Spacer width="20px" deskWidth="45px" />
+          <NavLink target=".open-source">Open Source</NavLink>
+          <Spacer width="20px" deskWidth="45px" />
+          <NavLink target=".projects">Projects</NavLink>
+          <Spacer width="20px" deskWidth="45px" />
+          <NavLink target=".contact">Contact</NavLink>
+        </NavContainer>
+      </HeaderContainer>
+    </>
+  )
+}
 
 const HeaderContainer = styled.header`
   display: flex;

@@ -61,7 +61,7 @@ const OpenSource = () => {
 
   return (
     <section className="open-source">
-      <SectionTitle title="Open Source" num="01" />
+      <SectionTitle title="Open Source" num="02" />
       <Spacer height="39.3px" deskHeight="67.5px" />
       <CardArrangement>
         {sourceItems.map((item) => (

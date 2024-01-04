@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { getThemeProp, ifDesktop } from './utils'
+import { getThemeProp, ifBigDesktop } from './utils'
 import Spacer from './spacer'
 
 const SectionTitle = ({ title, num }) => (
@@ -25,7 +25,7 @@ const StyledSectionTitle = styled.h2`
   line-height: 22px;
   color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     font-size: 29.56px;
     line-height: 35.47px;
   `)}
@@ -39,7 +39,7 @@ const StyledSectionNum = styled.span`
   line-height: 12px;
   color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     margin-top: 5px;
     font-size: 12px;
     line-height: 14.4px;
@@ -53,7 +53,7 @@ const PageTitle = styled.h1`
   line-height: 31.15px;
   color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     font-size: 49px;
     line-height: 55.2px;
   `)}
@@ -65,7 +65,7 @@ const PageSubtitle = styled.p`
   line-height: 24.69px;
   color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     font-size: 25px;
     line-height: 31px;
   `)}
@@ -79,7 +79,7 @@ const XLargeText = styled.h3`
   letter-spacing: 0.75px;
   color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     font-size: 24px;
     line-height: 24px;
   `)}
@@ -92,7 +92,7 @@ const LargeText = styled.p`
   letter-spacing: 0.22px;
   color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     font-size: 17.79px;
     line-height: 21.35px;
   `)}
@@ -104,7 +104,7 @@ const MediumText = styled.p`
   line-height: 16.18px;
   color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     font-size: 19px;
     line-height: 24px;
   `)}
@@ -116,7 +116,7 @@ const SmallText = styled.p`
   line-height: 13px;
   color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     font-size: 19px;
     line-height: 24px;
   `)}
@@ -129,7 +129,7 @@ const XSmallText = styled.p`
   letter-spacing: 0.22px;
   color: ${getThemeProp('text')};
 
-  ${ifDesktop(`
+  ${ifBigDesktop(`
     font-size: 14px;
     line-height: 16.8px;
   `)}

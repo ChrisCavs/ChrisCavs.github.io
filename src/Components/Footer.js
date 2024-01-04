@@ -8,7 +8,7 @@ import Spacer from '../Library/spacer'
 
 const Footer = () => (
   <footer className="contact">
-    <SectionTitle title="Contact" num="03" />
+    <SectionTitle title="Contact" num="04" />
     <Spacer height="44.8px" deskHeight="87px" />
     <PageTitle>Let's work together!</PageTitle>
     <Spacer height="20px" deskHeight="27.5px" />
