@@ -1,18 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { getThemeProp, ifBigDesktop, ifHover } from './utils'
+import { getThemeProp, ifBigDesktop, ifHover, translateAnimation, useInViewOnce } from './utils'
 import Spacer from './spacer'
 
-const SectionTitle = ({ title, num }) => (
-  <SectionTitleContainer>
-    <StyledSectionTitle>{title}</StyledSectionTitle>
-    <Spacer width="10px" deskWidth="10px" />
-    <StyledSectionNum>{num}</StyledSectionNum>
-  </SectionTitleContainer>
-)
+const SectionTitle = ({ title, num }) => {
+  const { ref, inView } = useInViewOnce()
+  return (
+    <SectionTitleContainer ref={ref} $inView={inView}>
+      <StyledSectionTitle>{title}</StyledSectionTitle>
+      <Spacer width="10px" deskWidth="10px" />
+      <StyledSectionNum>{num}</StyledSectionNum>
+    </SectionTitleContainer>
+  )
+}
 
 const SectionTitleContainer = styled.div`
+  ${translateAnimation()}
   display: flex;
   align-items: flex-start;
 `

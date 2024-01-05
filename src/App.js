@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components'
 
 import { getThemeProp, ifDesktop } from './Library/utils'
 import Spacer from './Library/spacer'
+import Line from './Library/line'
 
 import Header from './Components/Header'
 import Bio from './Components/Bio'
@@ -44,19 +45,19 @@ function App() {
           <Spacer height="48px" deskHeight="109px" />
           <Bio />
           <Spacer height="35px" deskHeight="107px" />
-          <LineBreak />
+          <Line />
           <Spacer height="16px" deskHeight="22px" />
           <About />
           <Spacer height="35px" deskHeight="79px" />
-          <LineBreak />
+          <Line />
           <Spacer height="16px" deskHeight="22px" />
           <OpenSource />
           <Spacer height="35px" deskHeight="79px" />
-          <LineBreak />
+          <Line />
           <Spacer height="16px" deskHeight="22px" />
           <Projects />
           <Spacer height="35px" deskHeight="79px" />
-          <LineBreak />
+          <Line />
           <Spacer height="16px" deskHeight="22px" />
           <Footer />
         </AppContainerInner>
@@ -78,12 +79,6 @@ const AppContainerInner = styled.div`
   ${ifDesktop(`
     padding: 0 69px;
   `)}
-`
-
-const LineBreak = styled.div`
-  width: 100%;
-  height: 2px;
-  background-color: ${getThemeProp('line')};
 `
 
 export default App
