@@ -1,38 +1,38 @@
-import React, { useContext } from 'react'
-import jump from 'jump.js'
-import { BottomNavigation, BottomNavigationAction, Paper } from '@mui/material'
-import { Home, Folder, Code, ContactPage } from '@mui/icons-material'
-import { MobileContext } from '../App'
+import React from 'react'
+import styled from 'styled-components'
 
-const Footer = () => {
-    const isMobile = useContext(MobileContext)
+import { PageTitle, SectionTitle } from '../Library/copy'
+import { ContactLink } from '../Library/link'
+import { iconMap } from '../Library/utils'
+import Spacer from '../Library/spacer'
 
-    return isMobile ? (
-        <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 2}} elevation={3}>
-            <BottomNavigation showLabels>
-                <BottomNavigationAction
-                    label="About"
-                    icon={<Home />}
-                    onClick={() => jump('.about', { offset: -86 })}
-                />
-                <BottomNavigationAction
-                    label="OpenSource"
-                    icon={<Code />}
-                    onClick={() => jump('.open-source', { offset: -86 })}
-                />
-                <BottomNavigationAction
-                    label="Projects"
-                    icon={<Folder />}
-                    onClick={() => jump('.projects', { offset: -86 })}
-                />
-                <BottomNavigationAction
-                    label="Contact"
-                    icon={<ContactPage />}
-                    onClick={() => jump('.contact', { offset: -86 })}
-                />
-            </BottomNavigation>
-        </Paper>
-    ) : null
-}
+const Footer = () => (
+  <footer className="contact">
+    <SectionTitle title="Contact" num="04" />
+    <Spacer height="45px" deskHeight="87px" />
+    <PageTitle>Let's work together!</PageTitle>
+    <Spacer height="20px" deskHeight="28px" />
+    <ContactContainer>
+      <ContactLink
+        isFooter
+        text="LinkedIn"
+        Icon={iconMap.Linkedin}
+        href="https://www.linkedin.com/in/chriscavalea"
+      />
+      <Spacer width="25px" deskWidth="39px" />
+      <ContactLink
+        isFooter
+        text="Email"
+        Icon={iconMap.Email}
+        href="mailto:chriscavs94@gmail.com"
+      />
+    </ContactContainer>
+    <Spacer height="69px" deskHeight="79px" />
+  </footer>
+)
+
+const ContactContainer = styled.div`
+  display: flex;
+`
 
 export default Footer
