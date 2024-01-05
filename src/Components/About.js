@@ -23,18 +23,18 @@ const About = () => (
     <Spacer height="39px" deskHeight="65px" />
     <AboutContainer>
       {blockItems.map((item, idx) => 
-        <Block key={idx} {...item} />)}
+        <Block key={idx} idx={idx} {...item} />)}
     </AboutContainer>
   </section>
 )
 
 const AboutContainer = styled.div`
   width: 100%;
+  display: grid;
+  gap: 10px;
 
   ${ifDesktop(`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
   `)}
 `
 

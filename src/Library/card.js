@@ -53,16 +53,13 @@ const ImageCard = ({ title, subtitle1, subtitle2, gitLink, src, alt }) => {
 const CardContainer = styled.div`
   width: 100%;
   padding: 20px;
-  margin-bottom: 7.38px;
   border-radius: 16.85px;
   box-sizing: border-box;
   background-color: ${getThemeProp('secondary')};
   ${translateAnimation()}
 
   ${ifDesktop(`
-    width: 49.3%;
     padding: 30px;
-    margin-bottom: 10px;
     border-radius: 25px;
   `)}
 `
@@ -100,14 +97,12 @@ const ThemeDot = styled.span`
 `
 
 const CardArrangement = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  display: grid;
+  gap: 10px;
 
   ${ifDesktop(`
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
   `)}
 `
 
