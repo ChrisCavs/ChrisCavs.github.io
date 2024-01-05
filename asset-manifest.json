@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b78aec49.css",
-    "main.js": "/static/js/main.753030c5.js",
+    "main.js": "/static/js/main.21ba5669.js",
     "static/media/mead.png": "/static/media/mead.a5e6efa7a328ae621be8.png",
     "static/media/chriscavs.png": "/static/media/chriscavs.d2fe1fb6b6f628608ef0.png",
     "static/media/avatar.jpeg": "/static/media/avatar.13f0ddfc7de6d592d078.jpeg",
@@ -53,25 +53,25 @@
     "static/media/roboto-mono-vietnamese-400-normal.woff2": "/static/media/roboto-mono-vietnamese-400-normal.20839d62f2fa7671dbcb.woff2",
     "static/media/roboto-mono-vietnamese-500-normal.woff2": "/static/media/roboto-mono-vietnamese-500-normal.356d6721c5da43ac7db6.woff2",
     "static/media/roboto-mono-vietnamese-700-normal.woff2": "/static/media/roboto-mono-vietnamese-700-normal.2fb245e2fd5e7d25f27a.woff2",
-    "static/media/js.svg": "/static/media/js.8533230d9440736f9eeaba2e426f5c59.svg",
-    "static/media/bug.svg": "/static/media/bug.133aa874a273e99e299fe3bc8e5e913d.svg",
-    "static/media/gear.svg": "/static/media/gear.7c75d81374f4a9da26dd6328e877a19f.svg",
-    "static/media/github.svg": "/static/media/github.fe06e5d2e5cf9d991308f4b0ac484eda.svg",
-    "static/media/linkedin.svg": "/static/media/linkedin.35d8a1ce75b8019a8d2b2b7aca6db5b8.svg",
-    "static/media/arrowUp.svg": "/static/media/arrowUp.c97b7576a5a56624ada2461218288937.svg",
-    "static/media/person.svg": "/static/media/person.a4f4a20dee32e99ea8d06d1ee9ac7061.svg",
-    "static/media/question.svg": "/static/media/question.ce545de203d4316ba22b6dc581a5a7f7.svg",
-    "static/media/check.svg": "/static/media/check.0a424a563e3ddb6d1c70c634057dd1c8.svg",
-    "static/media/eye.svg": "/static/media/eye.b0a9f38eae07acd23c5db6380cd53f8a.svg",
-    "static/media/email.svg": "/static/media/email.f60e651ec83779e2b58a3d62a3a4b106.svg",
+    "static/media/js.svg": "/static/media/js.ba593bdcbef387c08725d513b2b6feee.svg",
+    "static/media/bug.svg": "/static/media/bug.b40174d1943ac48f049198521a6b41fe.svg",
+    "static/media/gear.svg": "/static/media/gear.c60ac3ff9a607dcac2c3caeb4a3cde90.svg",
+    "static/media/github.svg": "/static/media/github.379ac6c7d926090335f07819d12a5d92.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.7a071f86586f9750c753f69e19ae7fc0.svg",
+    "static/media/arrowUp.svg": "/static/media/arrowUp.333c182019a540ed8b62532155a2f5b1.svg",
+    "static/media/person.svg": "/static/media/person.266a6900dfc7fc3a9c65c9029ea78e73.svg",
+    "static/media/question.svg": "/static/media/question.f7c089f8ea32a71f32800fa6472b2bf1.svg",
+    "static/media/check.svg": "/static/media/check.e05c2d90e9db5aaf9cec94bc4ab16b67.svg",
+    "static/media/eye.svg": "/static/media/eye.c9d71dd14f6bd46b3e8b50b834a58b12.svg",
+    "static/media/email.svg": "/static/media/email.49d1f7c4d572a682d87a3878c4f30525.svg",
     "index.html": "/index.html",
-    "static/media/star.svg": "/static/media/star.35de849fecc208b3933272459d4023ad.svg",
-    "static/media/downArrow.svg": "/static/media/downArrow.0576b67e0c7a37f8093a0edcd2326f4a.svg",
+    "static/media/star.svg": "/static/media/star.f9260bc846ba239c983f580a66300527.svg",
+    "static/media/downArrow.svg": "/static/media/downArrow.9a68a7b19ff1b2caccd872820fabd03a.svg",
     "main.b78aec49.css.map": "/static/css/main.b78aec49.css.map",
-    "main.753030c5.js.map": "/static/js/main.753030c5.js.map"
+    "main.21ba5669.js.map": "/static/js/main.21ba5669.js.map"
   },
   "entrypoints": [
     "static/css/main.b78aec49.css",
-    "static/js/main.753030c5.js"
+    "static/js/main.21ba5669.js"
   ]
 }
