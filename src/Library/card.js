@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { getThemeProp, ifActive, ifDesktop, useInViewOnce } from './utils'
+import { getThemeProp, ifDesktop, translateAnimation, useInViewOnce } from './utils'
 import { StarButton, StyledButton } from './button'
 import { MediumText, XLargeText } from './copy'
 import Spacer from './spacer'
@@ -21,7 +21,7 @@ const Card = ({ title, subtitle, stars, gitLink, demoLink }) => {
       <ButtonContainer>
         <div>
           <StyledButton href={gitLink}>GitHub</StyledButton>
-          <Spacer width="5px" deskWidth="8.18px" />
+          <Spacer width="5px" deskWidth="8px" />
           <StyledButton href={demoLink}>Demo</StyledButton>
         </div>
         <StarButton href={gitLink}>{stars}</StarButton>
@@ -51,21 +51,13 @@ const ImageCard = ({ title, subtitle1, subtitle2, gitLink, src, alt }) => {
 }
 
 const CardContainer = styled.div`
-  position: relative;
-  left: -100px;
   width: 100%;
   padding: 20px;
   margin-bottom: 7.38px;
   border-radius: 16.85px;
   box-sizing: border-box;
   background-color: ${getThemeProp('secondary')};
-  opacity: 0;
-  transition: all 1s;
-
-  ${ifActive(`
-    left: 0;
-    opacity: 1;
-  `)}
+  ${translateAnimation()}
 
   ${ifDesktop(`
     width: 49.3%;

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 
-import { iconMap, ifActive, ifBigDesktop, ifDesktop, useInViewOnce } from '../Library/utils'
+import { iconMap, ifBigDesktop, ifDesktop, translateAnimation, useInViewOnce } from '../Library/utils'
 import { PageSubtitle, PageTitle } from '../Library/copy'
 import { ContactLink } from '../Library/link'
 import Spacer from '../Library/spacer'
@@ -15,13 +15,15 @@ const Bio = () => {
   return (
     <BioContainer ref={ref} className="bio" $inView={inView}>
       <LeftSide>
-        <AvatarContainer>
+        <AvatarContainer $inView={inView} $idx={1}>
           <Avatar alt="avatar" src={avatar} />
         </AvatarContainer>
         <Spacer height="20px" deskHeight="20px" />
-        <PageTitle>Chris Cavalea</PageTitle>
+        <BioPageTitle $inView={inView} $idx={2}>
+          Chris Cavalea
+        </BioPageTitle>
         <Spacer height="20px" deskHeight="20px" />
-        <ContactContainer>
+        <ContactContainer $inView={inView} $idx={3}>
           <ContactLink
             text="GitHub"
             Icon={iconMap.Github}
@@ -42,7 +44,7 @@ const Bio = () => {
         </ContactContainer>
         {!isBigDesktop && <Spacer height="34px" deskHeight="48px" />}
       </LeftSide>
-      <RightSide>
+      <RightSide $inView={inView} $idx={4}>
         <PageSubtitle>
           I'm a frontend developer building bespoke user interfaces 
           that deliver a fantastic user experience. I like working 
@@ -55,16 +57,6 @@ const Bio = () => {
 }
 
 const BioContainer = styled.section`
-  position: relative;
-  left: -100px;
-  opacity: 0;
-  transition: all 1s;
-
-  ${ifActive(`
-    opacity: 1;
-    left: 0;
-  `)}
-
   ${ifBigDesktop(`
     display: flex;
     justify-content: space-between;
@@ -72,19 +64,28 @@ const BioContainer = styled.section`
   `)}
 `
 
+const BioPageTitle = styled(PageTitle)`
+  ${translateAnimation()}
+`
+
 const RightSide = styled.div`
+  ${translateAnimation()}
+
   ${ifBigDesktop(`
     max-width: 558px;
   `)}
 `
 
 const ContactContainer = styled.div`
+  ${translateAnimation()}
+
   ${ifDesktop(`
     display: flex;
   `)}
 `
 
 const AvatarContainer = styled.div`
+  ${translateAnimation()}
   width: 53.9px;
   height: 53.9px;
   border-radius: 17.23px;

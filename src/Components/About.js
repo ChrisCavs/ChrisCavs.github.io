@@ -20,9 +20,10 @@ const blockItems = [
 const About = () => (
   <section className="about">
     <SectionTitle title="About" num="01" />
-    <Spacer height="39.3px" deskHeight="67.5px" />
+    <Spacer height="39px" deskHeight="65px" />
     <AboutContainer>
-      {blockItems.map((item) => <Block key={item.text} {...item} />)}
+      {blockItems.map((item, idx) => 
+        <Block key={idx} {...item} />)}
     </AboutContainer>
   </section>
 )

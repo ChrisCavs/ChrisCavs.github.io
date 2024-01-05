@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { iconMap, getThemeProp, ifBigDesktop } from './utils'
+import { iconMap, getThemeProp, ifBigDesktop, ifHover } from './utils'
 import StyledIcon from './icon'
 import Spacer from './spacer'
 
@@ -32,8 +32,8 @@ const baseButtonStyles = `
   border-style: unset;
   text-decoration: none;
   cursor: pointer;
-  transform: scale(1);
-  transition: transform 0.3s;
+  transition: opacity 0.5s;
+  opacity: 1;
 `
 
 const baseDesktopStyles = `
@@ -46,9 +46,9 @@ const PrimaryButtonContainer = styled.a`
   color: ${getThemeProp('background')};
   background-color: ${getThemeProp('text')};
 
-  &:hover {
-    transform: scale(1.1);
-  }
+  ${ifHover(`
+    opacity: 0.5;
+  `)}
 
   ${ifBigDesktop(`
     ${baseDesktopStyles}
@@ -61,9 +61,9 @@ const SecondaryButtonContainer = styled.a`
   color: ${getThemeProp('text')};
   border: 1px solid ${getThemeProp('text') };
 
-  &:hover {
-    transform: scale(1.1);
-  }
+  ${ifHover(`
+    opacity: 0.5;
+  `)}
 
   ${ifBigDesktop(`
     ${baseDesktopStyles}

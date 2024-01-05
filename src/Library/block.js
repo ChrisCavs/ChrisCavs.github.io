@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { iconMap, getThemeProp, ifDesktop, ifBigDesktop, useInViewOnce, ifActive } from './utils'
+import { iconMap, getThemeProp, ifDesktop, ifBigDesktop, useInViewOnce, translateAnimation } from './utils'
 import { SmallText } from './copy'
 import StyledIcon from './icon'
 import Spacer from './spacer'
@@ -19,8 +19,6 @@ const Block = ({ icon, text }) => {
 }
 
 const StyledBlock = styled.div`
-  position: relative;
-  left: -100px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -30,13 +28,7 @@ const StyledBlock = styled.div`
   border-radius: 14px;
   box-sizing: border-box;
   background-color: ${getThemeProp('secondary')};
-  opacity: 0;
-  transition: all 1s;
-
-  ${ifActive(`
-    left: 0;
-    opacity: 1;
-  `)}
+  ${translateAnimation()}
 
   ${ifDesktop(`
     width: 49.3%;

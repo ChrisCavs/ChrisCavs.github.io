@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { getThemeProp, ifBigDesktop } from './utils'
+import { getThemeProp, ifBigDesktop, ifHover } from './utils'
 import Spacer from './spacer'
 
 const SectionTitle = ({ title, num }) => (
@@ -128,6 +128,12 @@ const XSmallText = styled.p`
   line-height: 12px;
   letter-spacing: 0.22px;
   color: ${getThemeProp('text')};
+  transition: opacity 0.5s;
+  opacity: 1;
+
+  ${ifHover(`
+    opacity: 0.5;
+  `)}
 
   ${ifBigDesktop(`
     font-size: 14px;

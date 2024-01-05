@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import jump from 'jump.js'
 
+import { ifHover } from './utils'
 import { LargeText, XSmallText } from './copy'
 import StyledIcon from './icon'
 import Spacer from './spacer'
@@ -28,7 +29,7 @@ const ContactLink = ({ href, text, Icon, isFooter }) => {
         Icon={Icon}
         type={isFooter ? "contactFooter" : "contact"}
       />
-      <Spacer width="9.5px" deskWidth="14.5px" />
+      <Spacer width="10px" deskWidth="15px" />
       <LargeText>{text}</LargeText>
     </ContactContainer>
   )
@@ -40,12 +41,12 @@ const ContactContainer = styled.a`
   width: fit-content;
   text-decoration: none;
   cursor: pointer;
-  transform: scale(1);
-  transition: transform 0.3s;
+  transition: opacity 0.5s;
+  opacity: 1;
 
-  &:hover {
-    transform: scale(1.1);
-  }
+  ${ifHover(`
+    opacity: 0.5;
+  `)}
 `
 
 export {

@@ -35,10 +35,31 @@ const getThemeProp = (key) => ({ theme }) => theme[key]
 const ifDesktop = (styles) => ({ theme }) => theme['isDesktop'] && styles
 const ifBigDesktop = (styles) => ({ theme }) => theme['isBigDesktop'] && styles
 const ifActive = (styles) => ({ $inView }) => $inView && styles
+const ifHover = (styles) => `
+  @media (hover: hover) {
+    &:hover {
+      ${styles}
+    }
+  }
+`
+const translateAnimation = () => ({ $idx, $inView }) => `
+  opacity: 0;
+  transform: translateY(4vh);
+  transition: transform 1s, opacity 1s;
+
+  ${$idx ? `
+    transition-delay: calc(0.1s * ${$idx});
+  ` : ''}
+
+  ${$inView ? `
+    opacity: 1;
+    transform: translateY(0); 
+  ` : ''}
+`
 
 const useInViewOnce = () => {
   const [viewState, setViewState] = useState(false)
-  const { ref, inView } = useInView({ threshold: 0.5 })
+  const { ref, inView } = useInView({ threshold: 0.4 })
 
   useEffect(() => {
     if (inView && !viewState) {
@@ -55,5 +76,7 @@ export {
   ifDesktop,
   ifBigDesktop,
   ifActive,
+  ifHover,
   useInViewOnce,
+  translateAnimation,
 }
