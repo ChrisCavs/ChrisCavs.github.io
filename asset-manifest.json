@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.b78aec49.css",
-    "main.js": "/static/js/main.21ba5669.js",
-    "static/media/mead.png": "/static/media/mead.a5e6efa7a328ae621be8.png",
-    "static/media/chriscavs.png": "/static/media/chriscavs.d2fe1fb6b6f628608ef0.png",
+    "main.js": "/static/js/main.e8417b99.js",
+    "static/media/Mead.png": "/static/media/Mead.a5e6efa7a328ae621be8.png",
+    "static/media/ChrisCavs.png": "/static/media/ChrisCavs.d2fe1fb6b6f628608ef0.png",
     "static/media/avatar.jpeg": "/static/media/avatar.13f0ddfc7de6d592d078.jpeg",
     "static/media/roboto-mono-cyrillic-ext-300-normal.woff": "/static/media/roboto-mono-cyrillic-ext-300-normal.b6f6f44c05d937383d45.woff",
     "static/media/roboto-mono-cyrillic-ext-500-normal.woff": "/static/media/roboto-mono-cyrillic-ext-500-normal.8e79d393337b578b0b23.woff",
@@ -68,10 +68,10 @@
     "static/media/star.svg": "/static/media/star.f9260bc846ba239c983f580a66300527.svg",
     "static/media/downArrow.svg": "/static/media/downArrow.9a68a7b19ff1b2caccd872820fabd03a.svg",
     "main.b78aec49.css.map": "/static/css/main.b78aec49.css.map",
-    "main.21ba5669.js.map": "/static/js/main.21ba5669.js.map"
+    "main.e8417b99.js.map": "/static/js/main.e8417b99.js.map"
   },
   "entrypoints": [
     "static/css/main.b78aec49.css",
-    "static/js/main.21ba5669.js"
+    "static/js/main.e8417b99.js"
   ]
 }
