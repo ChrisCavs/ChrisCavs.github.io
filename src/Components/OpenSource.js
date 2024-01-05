@@ -84,7 +84,7 @@ const SeeMore = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
+  width: 100%;
   height: 34.23px;
   padding: 0 15px;
   margin-top: 18.62px;
